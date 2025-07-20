@@ -1,21 +1,22 @@
 <?php
 $host = 'localhost';
+$port = 3306;
 $user = 'root';
 $pass = '';
 $db = 'ticketing_system';
 
 try {
     // Connect to MySQL server (without selecting DB)
-    $pdo = new PDO("mysql:host=$host", $user, $pass);
+    $pdo = new PDO("mysql:host=$host;port=$port", $user, $pass);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     // Create database if it doesn't exist
     $pdo->exec("CREATE DATABASE IF NOT EXISTS `$db`");
 
-    // Connect to the newly created database
+    // Connect to the new database
     $pdo->exec("USE `$db`");
 
-    // Create users table if it doesn't exist
+    // Create users table
     $pdo->exec("CREATE TABLE IF NOT EXISTS users (
         id INT AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(100) NOT NULL,
@@ -24,7 +25,8 @@ try {
         role ENUM('user', 'admin') DEFAULT 'user'
     )");
 
+    echo "✅ Database and users table created successfully!";
 } catch (PDOException $e) {
-    die("DB Setup Failed: " . $e->getMessage());
+    die("❌ DB Setup Failed: " . $e->getMessage());
 }
 ?>
