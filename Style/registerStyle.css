@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #ffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background {
+    position: absolute;
+    width: 90%;
+    height: 40%;
+}
+
+.background .shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f42ff7, #07f1ce);
+    opacity: 0.1;
+}
+
+.background .shape:first-child {
+    width: 500px;
+    height: 500px;
+    top: -100px;
+    left: -100px;
+}
+
+.background .shape:last-child {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    right: -50px;
+}
+
+.register-container {
+    background-color:  #fcfefff0;
+    border: 1px solid #020202c3; 
+    border-radius: 15px;
+    /*box-shadow: 30px 30px 30px rgba(224, 91, 231, 0.845);*/
+    width: 450px;
+    padding: 60px;
+    z-index: 1;
+    position: relative;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #ce4597;
+}
+
+.header h2 {
+    color:linear-gradient(#dfba33ec, #471eae);
+    font-size: 28px;
+    font-weight: 1000;
+    margin-bottom: 5px;
+}
+
+.header p {
+    color: #e60cb3de;
+    font-size: 14px;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px 12px 45px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #7b2ff7;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(123, 47, 247, 0.2);
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #777;
+    cursor: pointer;
+}
+
+.register-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, #7b2ff7, #f107a3);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.register-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(123, 47, 247, 0.3);
+}
+
+.register-btn i {
+    transition: transform 0.3s;
+}
+
+.register-btn:hover i {
+    transform: translateX(5px);
+}
+
+.social-login {
+    margin: 25px 0;
+    text-align: center;
+}
+
+.social-login p {
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.social-login p::before,
+.social-login p::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30%;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.social-login p::before {
+    left: 0;
+}
+
+.social-login p::after {
+    right: 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.social-icons a:nth-child(1) {
+    background-color: #db4437;
+}
+
+.social-icons a:nth-child(2) {
+    background-color: #4267B2;
+}
+
+.social-icons a:nth-child(3) {
+    background-color: #1DA1F2;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+.login-link {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+}
+
+.login-link a {
+    color: #7b2ff7;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.success-message {
+    background-color: #f0fff0;
+    border: 1px solid #d4edda;
+    border-radius: 8px;
+    padding: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.success-message i {
+    color: #28a745;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.success-message h3 {
+    color: #28a745;
+    margin-bottom: 10px;
+}
+
+.user-details p {
+    margin: 5px 0;
+    color: #333;
+}
+
+.user-details span {
+    font-weight: 500;
+    color: #555;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
+.alert {
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    color: #721c24;
+}
