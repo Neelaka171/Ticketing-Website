@@ -30,7 +30,7 @@ if(isset($_GET['logout'])) {
 </head>
 <body>
     <div class="container">
-        <h1 style="color: red;">Meka awlak naa needa ?</h1>
+        
         <h1>Welcome to the Dashboard</h1>
         
         <div class="welcome-message">
@@ -38,8 +38,8 @@ if(isset($_GET['logout'])) {
         </div>
         
         <div class="user-info">
-            
-            <h3>Your Account Information</h3>
+            <h1>Welcome to Dashboard </h1>
+            <h2>Your Account Information</h2>
             <p><strong>Username:</strong> <?php echo htmlspecialchars($_SESSION['username']); ?></p>
             <p><strong>User ID:</strong> <?php echo htmlspecialchars($_SESSION['id']); ?></p>
         </div>
